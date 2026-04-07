@@ -1,0 +1,64 @@
+<header class="nav">
+  <div class="nav-container">
+    <a href="/" class="nav-logo" aria-label="XYXP home">
+      <span class="logo-xy">XY</span><span class="logo-xp">XP</span>
+    </a>
+    <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+  </div>
+</header>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1536px;
+    margin: 0 auto;
+    padding: 20px 48px;
+  }
+
+  .nav-logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 24px;
+    letter-spacing: -0.6px;
+    line-height: 32px;
+  }
+
+  .logo-xy { color: #727272; }
+  .logo-xp { color: #18181b; }
+
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #0047ab;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 8px 24px;
+    border-radius: 4px;
+    transition: background 0.15s ease;
+  }
+
+  .nav-cta:hover { background: #003a8c; }
+
+  @media (max-width: 640px) {
+    .nav-container { padding: 20px 24px; }
+  }
+</style>

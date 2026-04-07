@@ -1,0 +1,343 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Nav />
+
+  <main class="hero">
+    <!-- Left: content -->
+    <div class="hero-left">
+      <div class="hero-content">
+
+        <h1 class="hero-heading">
+          The learning platform built<br />
+          around <em>friendly competition</em>,<br />
+          not compliance.
+        </h1>
+
+        <p class="hero-subtext">
+          Designed for high-performance teams. A methodical<br />
+          approach to knowledge retention through gamification.
+        </p>
+
+        <ul class="features" role="list">
+          <li class="feature-item">
+            <span class="feature-icon" aria-hidden="true">
+              <!-- Trophy (Lucide) -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0047ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                <path d="M4 22h16"/>
+                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+              </svg>
+            </span>
+            <div class="feature-text">
+              <span class="feature-label">Live Leaderboards</span>
+              <span class="feature-desc">Drive social accountability through transparent rankings.</span>
+            </div>
+          </li>
+
+          <li class="feature-item">
+            <span class="feature-icon" aria-hidden="true">
+              <!-- Swords (Lucide) -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0047ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/>
+                <line x1="13" x2="19" y1="19" y2="13"/>
+                <line x1="16" x2="20" y1="16" y2="20"/>
+                <line x1="19" x2="21" y1="21" y2="19"/>
+                <polyline points="14.5 6.5 18 3 21 3 21 6 17.5 9.5"/>
+                <line x1="5" x2="9" y1="14" y2="18"/>
+                <line x1="7" x2="4" y1="17" y2="20"/>
+                <line x1="3" x2="5" y1="19" y2="21"/>
+              </svg>
+            </span>
+            <div class="feature-text">
+              <span class="feature-label">Challenge Colleagues</span>
+              <span class="feature-desc">Send a taunt, start a rivalry, climb the leaderboard.</span>
+            </div>
+          </li>
+
+          <li class="feature-item">
+            <span class="feature-icon" aria-hidden="true">
+              <!-- Sparkles (Lucide) -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0047ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+                <path d="M20 3v4"/>
+                <path d="M22 5h-4"/>
+                <path d="M4 17v2"/>
+                <path d="M5 18H3"/>
+              </svg>
+            </span>
+            <div class="feature-text">
+              <span class="feature-label">AI-Powered Question Generation</span>
+              <span class="feature-desc">Generate challenges from your own documents in seconds.</span>
+            </div>
+          </li>
+
+          <li class="feature-item">
+            <span class="feature-icon" aria-hidden="true">
+              <!-- Lightbulb (Lucide) -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0047ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+                <path d="M9 18h6"/>
+                <path d="M10 22h4"/>
+              </svg>
+            </span>
+            <div class="feature-text">
+              <span class="feature-label">In the Moment Learning</span>
+              <span class="feature-desc">Instant, deep-dive explanations for complex topics.</span>
+            </div>
+          </li>
+        </ul>
+
+        <form class="cta-form" id="waitlist" action="#" method="post" novalidate>
+          <div class="cta-input-wrapper">
+            <input
+              class="cta-input"
+              type="email"
+              name="email"
+              placeholder="Enter your work email"
+              autocomplete="email"
+              required
+              aria-label="Work email address"
+            />
+            <button class="cta-button" type="submit">
+              Join<br />Waitlist
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+    <!-- Right: image placeholder (user will supply) -->
+    <div class="hero-right" aria-hidden="true">
+      <div class="image-placeholder"></div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ── Hero layout ─────────────────────────────────────────────── */
+  .hero {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    flex: 1;
+    max-width: 1536px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 48px;
+    gap: 48px;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  /* ── Heading ──────────────────────────────────────────────────── */
+  .hero-heading {
+    font-family: 'Newsreader', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(40px, 4vw, 58px);
+    line-height: 1.1;
+    color: #1a1c1c;
+  }
+
+  .hero-heading em {
+    font-style: italic;
+    color: #0047ab;
+  }
+
+  /* ── Subtext ──────────────────────────────────────────────────── */
+  .hero-subtext {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #71717a;
+  }
+
+  /* ── Features list ────────────────────────────────────────────── */
+  .features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 8px;
+  }
+
+  .feature-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .feature-icon {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 20px;
+    padding-top: 1px;
+  }
+
+  .feature-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .feature-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #1a1c1c;
+    line-height: 16px;
+  }
+
+  .feature-desc {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #71717a;
+  }
+
+  /* ── CTA form ─────────────────────────────────────────────────── */
+  .cta-form {
+    margin-top: 12px;
+    max-width: 480px;
+  }
+
+  .cta-input-wrapper {
+    display: flex;
+    align-items: stretch;
+    background: #f3f3f3;
+    border: 1px solid rgba(195, 198, 213, 0.2);
+    border-radius: 8px;
+    padding: 4px 4px 5px;
+  }
+
+  .cta-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 13px 16px 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #1a1c1c;
+    outline: none;
+    min-width: 0;
+  }
+
+  .cta-input::placeholder { color: #a1a1aa; }
+
+  .cta-button {
+    flex-shrink: 0;
+    background: #0047ab;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 36px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 16px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  .cta-button:hover { background: #003a8c; }
+
+  /* ── Right side placeholder ───────────────────────────────────── */
+  .hero-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    background: #ebebeb;
+    border: 2px dashed #d4d4d8;
+  }
+
+  /* ── Responsive ───────────────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 0 32px;
+      overflow-y: auto;
+    }
+
+    .hero-left {
+      padding: 48px 0 0;
+    }
+
+    .hero-right {
+      display: flex;
+      padding: 0 0 48px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 0 24px; }
+
+    .hero-heading {
+      font-size: clamp(38px, 10vw, 48px);
+    }
+
+    /* Let headings and subtext reflow naturally on mobile — no forced breaks */
+    .hero-heading br,
+    .hero-subtext br {
+      display: none;
+    }
+
+    .cta-form { max-width: 100%; }
+  }
+</style>
+
+<script>
+  const form = document.querySelector('.cta-form') as HTMLFormElement | null;
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const input = form.querySelector('input[type="email"]') as HTMLInputElement;
+    const email = input?.value.trim();
+    if (!email) return;
+
+    const button = form.querySelector('button') as HTMLButtonElement;
+    button.textContent = 'Sending…';
+    button.disabled = true;
+
+    await new Promise((r) => setTimeout(r, 800));
+
+    button.textContent = "You're in!";
+    input.value = '';
+    input.placeholder = "We'll be in touch soon.";
+  });
+</script>
