@@ -94,7 +94,7 @@ import Footer from '../components/Footer.astro';
           </li>
         </ul>
 
-        <form class="cta-form" id="waitlist" action="#" method="post" novalidate>
+        <form class="cta-form" id="waitlist" novalidate>
           <div class="cta-input-wrapper">
             <input
               class="cta-input"
@@ -322,6 +322,8 @@ import Footer from '../components/Footer.astro';
 </style>
 
 <script>
+  const WAITLIST_URL = 'https://app.xyxp.co.uk/api/waitlist';
+
   const form = document.querySelector('.cta-form') as HTMLFormElement | null;
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -330,13 +332,32 @@ import Footer from '../components/Footer.astro';
     if (!email) return;
 
     const button = form.querySelector('button') as HTMLButtonElement;
+    const originalHTML = button.innerHTML;
     button.textContent = 'Sending…';
     button.disabled = true;
 
-    await new Promise((r) => setTimeout(r, 800));
+    try {
+      const res = await fetch(WAITLIST_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
 
-    button.textContent = "You're in!";
-    input.value = '';
-    input.placeholder = "We'll be in touch soon.";
+      if (res.ok) {
+        button.textContent = "You're in!";
+        input.value = '';
+        input.placeholder = "We'll be in touch soon.";
+      } else {
+        const data = await res.json().catch(() => ({}));
+        button.innerHTML = originalHTML;
+        button.disabled = false;
+        input.setCustomValidity(data?.error ?? 'Something went wrong. Please try again.');
+        input.reportValidity();
+        input.setCustomValidity('');
+      }
+    } catch {
+      button.innerHTML = originalHTML;
+      button.disabled = false;
+    }
   });
 </script>
