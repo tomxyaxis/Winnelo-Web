@@ -1,7 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="6" fill="#0047ab"/>
-  <path d="M8 24l5-8 5 8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M10.5 20h5" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-  <path d="M19 8l4 8-4 8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M13 8l4 8-4 8" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0047ab;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="3" y="3" width="42" height="42" rx="7.47" ry="7.47" transform="translate(48 48) rotate(180)"/>
+  <g>
+    <polygon class="cls-2" points="23.68 34.88 23.68 15.33 40.52 25.1 23.68 34.88"/>
+    <path class="cls-2" d="M23.68,34.88L7.48,24.29v-4.08c5.48,3.57,10.95,7.13,16.43,10.7-.07,1.33-.15,2.65-.22,3.98Z"/>
+    <path class="cls-2" d="M30.38,31.01c-5.32-3.45-10.64-6.9-15.97-10.35,0-1.32,0-2.64,0-3.95,5.48,3.57,10.95,7.14,16.43,10.7-.15,1.2-.31,2.4-.46,3.59Z"/>
+    <path class="cls-2" d="M36.91,27.2c-5.18-3.35-10.36-6.7-15.54-10.05v-4.03c5.47,3.59,10.94,7.19,16.41,10.78-.29,1.1-.58,2.2-.86,3.3Z"/>
+  </g>
 </svg>
