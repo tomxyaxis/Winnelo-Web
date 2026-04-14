@@ -52,7 +52,7 @@ function buildWaitlistEmailHtml(email) {
               </a>
 
               <!-- Sign-off -->
-              <p style="color:#1a1c1c;font-size:15px;line-height:24px;margin:32px 0 0;">Tom</p>
+              <p style="color:#1a1c1c;font-size:15px;line-height:24px;margin:32px 0 0;">Tom Wood</p>
               <p style="color:#64748b;font-size:14px;line-height:20px;margin:2px 0 0;">Founder, Winnelo</p>
             </td>
           </tr>
