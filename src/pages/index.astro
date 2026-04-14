@@ -114,9 +114,17 @@ import Footer from '../components/Footer.astro';
       </div>
     </div>
 
-    <!-- Right: image placeholder (user will supply) -->
-    <div class="hero-right" aria-hidden="true">
-      <div class="image-placeholder"></div>
+    <!-- Right: hero image -->
+    <div class="hero-right">
+      <img
+        class="hero-image"
+        src="/Promo_image2x.png"
+        alt="Winnelo app showing live leaderboards and challenge screens on mobile"
+        width="1920"
+        height="1440"
+        loading="eager"
+        decoding="async"
+      />
     </div>
   </main>
 
@@ -128,7 +136,7 @@ import Footer from '../components/Footer.astro';
   .hero {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    flex: 1;
+    overflow: visible;
     max-width: 1536px;
     width: 100%;
     margin: 0 auto;
@@ -270,20 +278,20 @@ import Footer from '../components/Footer.astro';
 
   .cta-button:hover { background: #003a8c; }
 
-  /* ── Right side placeholder ───────────────────────────────────── */
+  /* ── Right side ──────────────────────────────────────────────── */
   .hero-right {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow: visible;
+    margin-right: -120px;
   }
 
-  .image-placeholder {
-    width: 100%;
-    max-width: 560px;
-    aspect-ratio: 1 / 1;
-    border-radius: 16px;
-    background: #ebebeb;
-    border: 2px dashed #d4d4d8;
+  .hero-image {
+    width: 140%;
+    height: auto;
+    display: block;
+    margin-left: -230px;
   }
 
   /* ── Responsive ───────────────────────────────────────────────── */
@@ -301,6 +309,12 @@ import Footer from '../components/Footer.astro';
     .hero-right {
       display: flex;
       padding: 0 0 48px;
+      justify-content: center;
+    }
+
+    .hero-image {
+      width: 100%;
+      margin-left: -100px;
     }
   }
 
@@ -322,8 +336,6 @@ import Footer from '../components/Footer.astro';
 </style>
 
 <script>
-  const WAITLIST_URL = 'https://app.xyxp.co.uk/api/waitlist';
-
   const form = document.querySelector('.cta-form') as HTMLFormElement | null;
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -332,32 +344,48 @@ import Footer from '../components/Footer.astro';
     if (!email) return;
 
     const button = form.querySelector('button') as HTMLButtonElement;
-    const originalHTML = button.innerHTML;
     button.textContent = 'Sending…';
     button.disabled = true;
 
-    try {
-      const res = await fetch(WAITLIST_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
+    await new Promise((r) => setTimeout(r, 800));
 
-      if (res.ok) {
-        button.textContent = "You're in!";
-        input.value = '';
-        input.placeholder = "We'll be in touch soon.";
-      } else {
-        const data = await res.json().catch(() => ({}));
-        button.innerHTML = originalHTML;
-        button.disabled = false;
-        input.setCustomValidity(data?.error ?? 'Something went wrong. Please try again.');
-        input.reportValidity();
-        input.setCustomValidity('');
-      }
-    } catch {
-      button.innerHTML = originalHTML;
-      button.disabled = false;
+    button.textContent = "You're in!";
+    input.value = '';
+    input.placeholder = "We'll be in touch soon.";
+  });
+
+  // Nav "Join Waitlist" button — focus the email input with a pulse animation
+  const navBtn = document.getElementById('nav-waitlist-btn');
+  navBtn?.addEventListener('click', () => {
+    const input = document.querySelector('.cta-input') as HTMLInputElement | null;
+    const wrapper = document.querySelector('.cta-input-wrapper') as HTMLElement | null;
+    if (!input || !wrapper) return;
+
+    const isMobile = window.matchMedia('(max-width: 1024px)').matches;
+
+    if (isMobile) {
+      // Scroll the form into view first, then focus and animate once scrolling settles
+      wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => {
+        input.focus({ preventScroll: true });
+        pulseWrapper(wrapper);
+      }, 500);
+    } else {
+      // Desktop: no scroll, just focus and animate in place
+      input.focus({ preventScroll: true });
+      pulseWrapper(wrapper);
     }
   });
+
+  function pulseWrapper(wrapper: HTMLElement) {
+    wrapper.animate(
+      [
+        { borderColor: 'rgba(195, 198, 213, 0.2)', boxShadow: 'none' },
+        { borderColor: '#0047AB', boxShadow: '0 0 0 4px rgba(0, 71, 171, 0.18)' },
+        { borderColor: '#0047AB', boxShadow: '0 0 0 4px rgba(0, 71, 171, 0.18)' },
+        { borderColor: 'rgba(195, 198, 213, 0.2)', boxShadow: 'none' },
+      ],
+      { duration: 1000, easing: 'ease', fill: 'none', offset: [0, 0.25, 0.6, 1] },
+    );
+  }
 </script>

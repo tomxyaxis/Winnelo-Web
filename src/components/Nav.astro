@@ -1,9 +1,10 @@
 <header class="nav">
   <div class="nav-container">
-    <a href="/" class="nav-logo" aria-label="XYXP home">
-      <span class="logo-xy">XY</span><span class="logo-xp">XP</span>
+    <a href="/" class="nav-logo" aria-label="Winnelo home">
+      <img src="/logo.svg" alt="" class="logo-mark" aria-hidden="true" />
+      <span class="logo-text">Winnelo</span>
     </a>
-    <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+    <button type="button" class="nav-cta" id="nav-waitlist-btn">Join Waitlist</button>
   </div>
 </header>
 
@@ -30,15 +31,24 @@
 
   .nav-logo {
     font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-style: italic;
-    font-size: 24px;
-    letter-spacing: -0.6px;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: -1px;
     line-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
   }
 
-  .logo-xy { color: #727272; }
-  .logo-xp { color: #18181b; }
+  .logo-mark {
+    height: 28px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .logo-text { letter-spacing: -1px; position: relative; top: 1px; }
 
   .nav-cta {
     display: inline-flex;
@@ -53,6 +63,8 @@
     text-transform: uppercase;
     padding: 8px 24px;
     border-radius: 4px;
+    border: none;
+    cursor: pointer;
     transition: background 0.15s ease;
   }
 
