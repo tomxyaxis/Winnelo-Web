@@ -347,11 +347,20 @@ import Footer from '../components/Footer.astro';
     button.textContent = 'Sending…';
     button.disabled = true;
 
-    await new Promise((r) => setTimeout(r, 800));
+    const res = await fetch('/api/waitlist', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    });
 
-    button.textContent = "You're in!";
-    input.value = '';
-    input.placeholder = "We'll be in touch soon.";
+    if (res.ok) {
+      button.textContent = "You're in!";
+      input.value = '';
+      input.placeholder = "We'll be in touch soon.";
+    } else {
+      button.textContent = 'Try again';
+      button.disabled = false;
+    }
   });
 
   // Nav "Join Waitlist" button — focus the email input with a pulse animation
