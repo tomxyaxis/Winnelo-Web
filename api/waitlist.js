@@ -111,7 +111,7 @@ export default async function handler(req, res) {
   }
 
   const { error: emailError } = await resend.emails.send({
-    from: 'Winnelo <onboarding@winnelo.com>',
+    from: 'Winnelo <hello@winnelo.com>',
     to: email,
     subject: "You're on the Winnelo waitlist",
     html: buildWaitlistEmailHtml(email),
