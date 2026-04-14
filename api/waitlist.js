@@ -39,10 +39,10 @@ function buildWaitlistEmailHtml(email) {
                   <td style="padding:20px 24px;">
                     <p style="color:#64748b;font-size:11px;font-weight:600;letter-spacing:1.5px;margin:0 0 12px;text-transform:uppercase;">What is Winnelo?</p>
                     <p style="color:#1a1c1c;font-size:15px;line-height:24px;margin:0 0 16px;">Get started in minutes. Tailor the competition to fit your culture. Design and schedule challenges to reinforce knowledge at the perfect time.</p>
-                    <p style="color:#64748b;font-size:14px;line-height:22px;margin:0 0 4px;">→&nbsp; Set up in minutes</p>
+                    <p style="color:#64748b;font-size:14px;line-height:22px;margin:0 0 4px;">→&nbsp; Get started in minutes</p>
                     <p style="color:#64748b;font-size:14px;line-height:22px;margin:0 0 4px;">→&nbsp; AI-generated questions from your own content</p>
-                    <p style="color:#64748b;font-size:14px;line-height:22px;margin:0 0 4px;">→&nbsp; Live leaderboards</p>
-                    <p style="color:#64748b;font-size:14px;line-height:22px;margin:0;">→&nbsp; In-depth reporting</p>
+                    <p style="color:#64748b;font-size:14px;line-height:22px;margin:0 0 4px;">→&nbsp; Real-time leaderboards with team interaction</p>
+                    <p style="color:#64748b;font-size:14px;line-height:22px;margin:0;">→&nbsp; Reporting and knowledge gap tracking</p>
                   </td>
                 </tr>
               </table>
