@@ -15,7 +15,8 @@ export default async function handler(req, res) {
   const audienceId = process.env.RESEND_AUDIENCE_ID;
 
   if (!apiKey || !audienceId) {
-    return res.status(500).json({ error: 'Server misconfigured' });
+    console.error('Missing env vars:', { hasApiKey: !!apiKey, hasAudienceId: !!audienceId });
+    return res.status(500).json({ error: 'Server misconfigured', hasApiKey: !!apiKey, hasAudienceId: !!audienceId });
   }
 
   const resend = new Resend(apiKey);
@@ -27,6 +28,7 @@ export default async function handler(req, res) {
   });
 
   if (error) {
+    console.error('Resend error:', JSON.stringify(error));
     return res.status(500).json({ error: error.message });
   }
 

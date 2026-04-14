@@ -358,6 +358,8 @@ import Footer from '../components/Footer.astro';
       input.value = '';
       input.placeholder = "We'll be in touch soon.";
     } else {
+      const data = await res.json();
+      console.error('Waitlist error:', data);
       button.textContent = 'Try again';
       button.disabled = false;
     }
