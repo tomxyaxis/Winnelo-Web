@@ -21,15 +21,17 @@ export default async function handler(req, res) {
 
   const resend = new Resend(apiKey);
 
-  const { error } = await resend.contacts.create({
+  const { data, error } = await resend.contacts.create({
     email,
     unsubscribed: false,
     audienceId,
   });
 
+  console.log('Resend response:', JSON.stringify({ data, error }));
+
   if (error) {
     console.error('Resend error:', JSON.stringify(error));
-    return res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: error.message, details: error });
   }
 
   return res.status(200).json({ success: true });
