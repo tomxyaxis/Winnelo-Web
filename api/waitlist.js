@@ -34,16 +34,17 @@ function buildWaitlistEmailHtml(email) {
               </p>
 
               <!-- What is Winnelo box -->
+              <hr style="border:none;border-top:2px solid #0047ab;margin:0 0 28px;width:40px;text-align:left;" />
               <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3f7ff;border-radius:4px;border:1px solid rgba(0,71,171,0.15);margin:0 0 28px;">
                 <tr>
                   <td style="padding:20px 24px;">
                     <p style="color:#64748b;font-size:11px;font-weight:600;letter-spacing:1.5px;margin:0 0 12px;text-transform:uppercase;">What is Winnelo?</p>
-                    <p style="color:#1a1c1c;font-size:15px;line-height:24px;margin:0 0 10px;">
-                      Winnelo is a learning platform built around friendly competition. Teams challenge each other, climb leaderboards, and actually retain what they learn.
+                    <p style="color:#1a1c1c;font-size:15px;line-height:24px;margin:0 0 16px;">
+                      Winnelo is a learning platform built around friendly competition. Teams challenge each other, climb leaderboards, and retain what they learn.
                     </p>
-                    <p style="color:#64748b;font-size:14px;line-height:22px;margin:0;">
-                      Set up in minutes &middot; AI-generated questions from your own content &middot; Live leaderboards &middot; Built for high-performance teams.
-                    </p>
+                    <p style="color:#64748b;font-size:14px;line-height:22px;margin:0 0 4px;">→&nbsp; Set up in minutes</p>
+                    <p style="color:#64748b;font-size:14px;line-height:22px;margin:0 0 4px;">→&nbsp; AI-generated questions from your own content</p>
+                    <p style="color:#64748b;font-size:14px;line-height:22px;margin:0;">→&nbsp; Live leaderboards</p>
                   </td>
                 </tr>
               </table>
@@ -52,6 +53,10 @@ function buildWaitlistEmailHtml(email) {
               <a href="https://winnelo.com" style="background-color:#0047ab;border-radius:4px;color:#ffffff;display:block;font-size:15px;font-weight:600;padding:16px 0;text-align:center;text-decoration:none;width:100%;box-sizing:border-box;">
                 Learn more about Winnelo →
               </a>
+
+              <!-- Sign-off -->
+              <p style="color:#1a1c1c;font-size:15px;line-height:24px;margin:32px 0 0;">Tom</p>
+              <p style="color:#64748b;font-size:14px;line-height:20px;margin:2px 0 0;">Founder, Winnelo</p>
             </td>
           </tr>
 
