@@ -18,7 +18,7 @@ function buildWaitlistEmailHtml(email) {
           <tr>
             <td style="padding:40px 40px 0;">
               <p style="font-size:36px;font-weight:700;letter-spacing:-1px;line-height:1;margin:0 0 6px;color:#1a1c1c;display:flex;align-items:center;"><img src="https://winnelo.com/favicon.png" alt="" width="32" height="32" style="display:inline-block;vertical-align:middle;margin-right:10px;border:0;position:relative;top:-1px;" /><span style="vertical-align:middle;">Winnelo</span></p>
-              <p style="color:#94a3b8;font-size:12px;letter-spacing:0.2px;margin:0 0 24px;">The competitive learning platform built around friendly competition.</p>
+              <p style="color:#94a3b8;font-size:12px;letter-spacing:0.2px;margin:8px 0 28px;">The competitive learning platform built around friendly competition.</p>
               <hr style="border:none;border-top:1px solid #0047ab;margin:0;" />
             </td>
           </tr>
