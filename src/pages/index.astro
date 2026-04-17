@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import promoImage from '../assets/Promo_image2x.png';
 ---
 
 <Layout>
@@ -116,14 +118,14 @@ import Footer from '../components/Footer.astro';
 
     <!-- Right: hero image -->
     <div class="hero-right">
-      <img
+      <Image
         class="hero-image"
-        src="/Promo_image2x.png"
+        src={promoImage}
         alt="Winnelo app showing live leaderboards and challenge screens on mobile"
-        width="1920"
-        height="1440"
+        format="webp"
+        quality={100}
         loading="eager"
-        decoding="async"
+        fetchpriority="high"
       />
     </div>
   </main>
